@@ -3,6 +3,13 @@ import discord
 from discord.ext.commands import Bot
 from random import choice
 
+#importing env variables
+from dotenv import load_dotenv
+import os
+
+#Credentials of bot token
+load_dotenv('.env')
+
 bot = Bot("!") 
 
 # client = discord.Client()
@@ -33,4 +40,4 @@ async def compliment(ctx, member:discord.Member):
     await ctx.send(complimentToSend)
 
 #Running the bot
-bot.run("NzYxODg2NTc2NzU3MTc4Mzc5.X3hIKw._l6WKrVOzE8GwoPPCmUbp0T16OM")
+bot.run("os.getenv('COMPLIMENT_BOT_TOKEN')")
