@@ -40,4 +40,4 @@ async def compliment(ctx, member:discord.Member):
     await ctx.send(complimentToSend)
 
 #Running the bot
-bot.run("os.getenv('COMPLIMENT_BOT_TOKEN')")
+bot.run(os.getenv('COMPLIMENT_BOT_TOKEN'))
